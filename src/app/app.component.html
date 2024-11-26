@@ -1,2 +1,21 @@
-<app-user/>
+<div>
+    <h1>QUE ME PARECE ANGULAR?</h1>
+    <article>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate distinctio libero dolorem! Est facilis ipsum ea vero maiores, nihil saepe provident officiis ex, ad quod nulla sequi voluptatibus, sunt et.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eligendi commodi sint rem eveniet est iusto iste vel, animi, soluta odit cupiditate. Cupiditate minus alias quis porro nemo hic? In?</p>
+    </article>
+
+    <!-- DEFER HACE Q LA CARGA SE EJECUTE CUANDO LA CPU YA NO TENGA NADA MAS Q CARGAR (CAMBIA LA PRIORIDAD)
+        O SE CUMPLA LA CONDICION-->
+
+    @defer (on viewport) {
+        <app-comments></app-comments>
+    } <!-- placeholder  Muestra algo mientras el componente ya esta descargado, pero aun no se muestra en el sistema-->
+    @placeholder { 
+        <p>Futuros Comentarios</p>
+    } <!-- Loading muestra un mensaje mientras el componente se esta descargando, tambien puedes definir cuanto tiempo como minimo quieres q aparezca -->
+    @loading (minimum 1s){
+        <p>Cargando componente...</p>
+    }
+</div>
 <!--<router-outlet></router-outlet>-->
